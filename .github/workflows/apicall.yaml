@@ -1,0 +1,11 @@
+name: Repo Dispatch Example
+
+on:
+  repository_dispatch:
+    types: [custom-event]
+
+jobs:
+  repo-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Triggered via API"
