@@ -1,0 +1,12 @@
+name: Path Filter Example
+
+on:
+  push:
+    paths:
+      - "src/**"
+
+jobs:
+  path-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Changes in src folder"
