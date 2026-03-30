@@ -1,0 +1,11 @@
+name: Schedule Example
+
+on:
+  schedule:
+    - cron: "0 9 * * *"
+
+jobs:
+  schedule-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Triggered by SCHEDULE"
