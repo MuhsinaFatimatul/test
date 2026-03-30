@@ -1,0 +1,11 @@
+name: Release Example
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  release-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Triggered by RELEASE"
