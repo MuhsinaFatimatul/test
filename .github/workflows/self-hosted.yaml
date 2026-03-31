@@ -13,7 +13,8 @@ jobs:
     steps:
       - name: Create folder locally
         run: |
-          mkdir -p /home/ubuntu/testfolder3
+          mkdir -p /home/ubuntu/testfolder4
+          mkdir -p /home/ubuntu/testfolder5
           pwd
           ls
 
