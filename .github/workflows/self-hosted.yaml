@@ -1,19 +1,19 @@
 name: Self Hosted Runner 
 
 on:
-  push:
-    branches:
-      - main
+  # push:
+  #   branches:
+  #     - main
   workflow_dispatch:
 
 jobs:
   selfhosted-job:
-    runs-on: self-hosted
+    runs-on: abcd
 
     steps:
       - name: Create folder locally
         run: |
-          mkdir -p /home/ubuntu/testfolder2
+          mkdir -p /home/ubuntu/testfolder3
           pwd
           ls
 
