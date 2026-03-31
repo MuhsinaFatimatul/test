@@ -16,6 +16,6 @@ jobs:
           echo "${{ secrets.SSH_KEY }}" > key.pem
           chmod 400 key.pem
 
-          ssh -i key.pem ubuntu@${{ secrets.HOST }} " mkdir /home/ubuntu/testfolder1"
+          ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@${{ secrets.HOST }} " mkdir /home/ubuntu/testfolder1"
           ls
           pwd
