@@ -1,0 +1,21 @@
+name: Github Hosted Runner 
+
+on:
+  push:
+    branches:
+    - main
+  workflow_dispatch:
+
+jobs:
+  hosted-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Create folder on EC2 via SSH
+        run: |
+          echo "${{ secrets.SSH_KEY }}" > key.pem
+          chmod 400 key.pem
+
+          ssh -i key.pem ubuntu@${{ secrets.HOST }} " mkdir /home/ubuntu/testfolder1"
+          ls
+          pwd
