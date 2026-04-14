@@ -3,7 +3,7 @@ name: Path Filter Example
 on:
   push:
     paths:
-      - "src/**"
+      - "README.md"
 
 jobs:
   path-job:
