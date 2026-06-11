@@ -15,5 +15,6 @@ spec:
       containers:
         - name: staticapp
           image: muhsineen/staticapp:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
